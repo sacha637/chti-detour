@@ -1,5 +1,11 @@
 import type { Settings, Hours } from "@/types";
 
+export type DayHours = {
+  open: string;
+  close: string;
+  closed?: boolean;
+};
+
 export const DEFAULT_SETTINGS: Settings = {
   restaurantName: "Ch'ti Détour",
   tagline: "Bistrot & restauration – Valenciennes",
@@ -21,6 +27,6 @@ export const DEFAULT_HOURS: Hours = {
   wednesday: { open: "12:00", close: "14:00" },
   thursday: { open: "12:00", close: "14:00" },
   friday: { open: "12:00", close: "14:00" },
-  saturday: { closed: true },
-  sunday: { closed: true },
+  saturday: { open: "", close: "", closed: true },
+  sunday: { open: "", close: "", closed: true },
 };
